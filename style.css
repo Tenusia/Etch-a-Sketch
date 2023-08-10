@@ -2,22 +2,25 @@ div{
     background-color: aquamarine;
 }
 
-.grid{
+#grid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     border-style: solid;
-    max-width: 300px;
-    width: 300px;
-    height: 300px;
-    
+    max-width: 500px;
+    max-height: 500px;
+    width: 500px;
+    height: 500px;
+    overflow: auto;
 }
 
 .row{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-content: stretch;
+    
+ 
 }
 
 .gridsquare{
+    /* display: flex; */
     border-style: solid;
     width: 50px;
     height: 50px;

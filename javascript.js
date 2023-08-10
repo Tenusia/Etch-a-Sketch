@@ -5,7 +5,7 @@ function generateGrid(){
     var nr = document.getElementById("GridSize").value;
     
     //var body = document.body; // whatever you want to append the rows to: 
-    var body = document.querySelector('.grid')
+    var body = document.querySelector('#grid')
     if (body.hasChildNodes(row)) {body.replaceChildren()};
 
     for(var i = 0; i < nr; i++){ 
@@ -14,7 +14,7 @@ function generateGrid(){
       for(var x = 1; x <= nr; x++){ 
           var cell = document.createElement("div"); 
           cell.className = "gridsquare"; 
-          cell.innerText = (i * nr) + x;
+          //cell.innerText = (i * nr) + x;
           row.appendChild(cell); 
       } 
       body.appendChild(row); 
