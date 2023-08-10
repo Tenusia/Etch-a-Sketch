@@ -1,10 +1,8 @@
-
+var paintColor = "BLACK";
 
 function generateGrid(){ 
     
     var nr = document.getElementById("GridSize").value;
-    
-    //var body = document.body; // whatever you want to append the rows to: 
     var body = document.querySelector('#grid')
     if (body.hasChildNodes(row)) {body.replaceChildren()};
 
@@ -14,25 +12,49 @@ function generateGrid(){
       for(var x = 1; x <= nr; x++){ 
           var cell = document.createElement("div"); 
           cell.className = "gridsquare"; 
-          //cell.innerText = (i * nr) + x;
+          cell.classList.add("Outset");
           row.appendChild(cell); 
       } 
       body.appendChild(row); 
     } 
-    //document.getElementById("code").innerText = body.innerHTML;
   }
 
 function clearBGC(){
     var cellNodeList = document.querySelectorAll('.gridsquare');
     var i;
     for (i = 0; i < cellNodeList.length; i++) {
-        cellNodeList[i].style.backgroundColor = "WHITE";
+        cellNodeList[i].style.backgroundColor = "rgb(222, 232, 228)";
+    }
+}
+
+function changeColor(color) {
+    console.log(color);
+    paintColor = color;
+}
+
+function paintToggle() {
+
+}
+
+function gridToggle() {
+    var cellNodeList = document.querySelectorAll('.gridsquare');
+    var i;
+    for (i = 0; i < cellNodeList.length; i++) {
+        if(cellNodeList[i].classList.contains("Outset")) {
+            cellNodeList[i].classList.add("Empty");
+            cellNodeList[i].classList.remove("Outset");
+        }
+        else if(cellNodeList[i].classList.contains("Empty")) {
+            cellNodeList[i].classList.add("Outset");
+            cellNodeList[i].classList.remove("Empty");
+        }
     }
 }
 
 addEventListener("mouseover", function (e) {
     console.log(e);
-    if(e.target.className == "gridsquare") {
-        e.target.style.backgroundColor = "RED";
+    if(e.target.classList.contains("gridsquare")) {
+        e.target.style.backgroundColor = paintColor;
     }
 });
+

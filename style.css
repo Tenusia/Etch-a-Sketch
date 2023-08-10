@@ -1,32 +1,81 @@
-div{
-    background-color: aquamarine;
-}
-
 #grid{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: table;
     border-style: solid;
     max-width: 500px;
     max-height: 500px;
     width: 500px;
     height: 500px;
-    overflow: auto;
+    margin: 5px 0;
+    background-color: rgb(222, 232, 228);
 }
 
 .row{
-    
- 
+    display: table-row;
 }
 
 .gridsquare{
-    /* display: flex; */
-    border-style: solid;
-    width: 50px;
-    height: 50px;
+    display: table-cell;
+    border-style: outset; /* Make this selectable via button and JS */
+    height: auto;
+}
+
+.gridsquare.Outset{
+    border-style: outset; /* Make this selectable via button and JS */
+}
+
+.gridsquare.Empty{
+    border-style: none; /* Make this selectable via button and JS */
 }
 
 .gridsquare:hover{
     background-color: black;
 }
 
+.button-line{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.colorPallette{
+    width: 500px;
+    border: solid;
+    margin: 10px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.grid-head{
+    padding-left: 5px;
+}
+
+.grid-item1{
+    background-color: blue;
+}
+
+.grid-item2{
+    background-color: red;
+}
+
+.grid-item3{
+    background-color: yellow;
+}
+
+.grid-item4{
+    background-color: orange;
+}
+
+.grid-item5{
+    background-color: green;
+}
+
+.grid-item6{
+    background-color: violet;
+}
+
+.grid-item7{
+    background-color: black;
+}

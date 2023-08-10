@@ -14,6 +14,24 @@
     <input type="number" id="GridSize" name="GridSize" min="1" max="100" value="16">
     <input type="button" onclick="generateGrid()" value="Generate grid"> <br>
     <div id="grid"></div>
-    <input type="button" onclick="clearBGC()" value="Clear background color"> 
+    
+    <div class="button-line">
+        <input type="button" onclick="clearBGC()" value="Clear background color">
+        <input type="button" onclick="paintToggle()" value="Paint Click / Auto">
+        <input type="button" onclick="gridToggle()" value="Toggle grid On / Off">
+    </div>
+    
+    <div class="colorPallette">
+        <div class="grid-container">
+            <div class="grid-head"> Color:</div>
+            <div class="grid-item1" onclick="changeColor('BLUE')"></div>
+            <div class="grid-item2" onclick="changeColor('RED')"></div>
+            <div class="grid-item3" onclick="changeColor('YELLOW')"></div>
+            <div class="grid-item4" onclick="changeColor('ORANGE')"></div>
+            <div class="grid-item5" onclick="changeColor('GREEN')"></div>
+            <div class="grid-item6" onclick="changeColor('VIOLET')"></div>
+            <div class="grid-item7" onclick="changeColor('BLACK')"></div>
+          </div>
+    </div>
 </body>
 </html>
