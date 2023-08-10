@@ -1,4 +1,9 @@
-function generateGrid(nr){ 
+
+
+function generateGrid(){ 
+    
+    var nr = document.getElementById("GridSize").value;
+    
     //var body = document.body; // whatever you want to append the rows to: 
     var body = document.querySelector('.grid')
     if (body.hasChildNodes(row)) {body.replaceChildren()};
