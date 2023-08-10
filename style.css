@@ -9,22 +9,24 @@
     background-color: rgb(222, 232, 228);
 }
 
+/* Set-up buttons with toggle state */
+
 .row{
     display: table-row;
 }
 
 .gridsquare{
     display: table-cell;
-    border-style: outset; /* Make this selectable via button and JS */
+    border-style: outset; 
     height: auto;
 }
 
 .gridsquare.Outset{
-    border-style: outset; /* Make this selectable via button and JS */
+    border-style: outset; 
 }
 
 .gridsquare.Empty{
-    border-style: none; /* Make this selectable via button and JS */
+    border-style: none; 
 }
 
 .gridsquare:hover{

@@ -1,4 +1,6 @@
 var paintColor = "BLACK";
+var autoPaint = true;
+var rainbowClr = false;
 
 function generateGrid(){ 
     
@@ -32,8 +34,23 @@ function changeColor(color) {
     paintColor = color;
 }
 
-function paintToggle() {
+// function paintToggle() {
+//     if(autoPaint) {
+//         autoPaint = false;
+//         console.log(autoPaint);
+//     }
+//     else {
+//         autoPaint = true;
+//         console.log(autoPaint);
+//     }
+// }
 
+function randomColor() {
+    const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const r = randomBetween(0, 255);
+    const g = randomBetween(0, 255);
+    const b = randomBetween(0, 255);
+    paintColor = `rgb(${r},${g},${b})`;
 }
 
 function gridToggle() {
@@ -51,10 +68,24 @@ function gridToggle() {
     }
 }
 
+function rainbowColor() {
+    if(rainbowClr) {
+        rainbowClr = false
+    }
+    else {
+        rainbowClr = true;
+    }
+}
+
 addEventListener("mouseover", function (e) {
-    console.log(e);
     if(e.target.classList.contains("gridsquare")) {
+        if(rainbowClr) {
+            randomColor();
+        }
         e.target.style.backgroundColor = paintColor;
     }
-});
+})
+   
+
+
 
