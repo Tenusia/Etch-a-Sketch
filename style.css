@@ -1,3 +1,8 @@
+body{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #grid{
     display: table;
     border-style: solid;
@@ -17,11 +22,13 @@
 
 .gridsquare{
     display: table-cell;
+    border-width: thin;
     border-style: outset; 
     height: auto;
 }
 
 .gridsquare.Outset{
+    border-width: thin;
     border-style: outset; 
 }
 
@@ -36,22 +43,51 @@
 .button-line{
     display: flex;
     justify-content: space-between;
+    padding: 7px 0 0 0;
     width: 500px;
+}
+
+input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px; 
+}
+
+input[type=number]{
+    margin: 0 10px 0 3px;
+}
+
+input[type=button]{
+    
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 20px;
+    transition-duration: 0.4s;
+}
+
+input[type=button]:hover {
+    background-color: #2d3568;
+    color: white;
 }
 
 .colorPallette{
     width: 500px;
-    border: solid;
+    border: 2px solid;
+    border-radius: 5px;
     margin: 10px 0;
+    height: 20px;
 }
 
 .grid-container {
     display: grid;
+    height: 20px;
     grid-template-columns: auto auto auto auto auto auto auto auto;
 }
 
 .grid-head{
     padding-left: 5px;
+    margin: auto 15px;
 }
 
 .grid-item1{

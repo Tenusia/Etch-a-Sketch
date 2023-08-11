@@ -3,7 +3,6 @@ var autoPaint = true;
 var rainbowClr = false;
 
 function generateGrid(){ 
-    
     var nr = document.getElementById("GridSize").value;
     var body = document.querySelector('#grid')
     if (body.hasChildNodes(row)) {body.replaceChildren()};
@@ -30,7 +29,7 @@ function clearBGC(){
 }
 
 function changeColor(color) {
-    console.log(color);
+    rainbowClr = false;
     paintColor = color;
 }
 
@@ -44,6 +43,11 @@ function changeColor(color) {
 //         console.log(autoPaint);
 //     }
 // }
+
+function singleRandomColor() {
+    rainbowClr = false;
+    randomColor();
+}
 
 function randomColor() {
     const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
