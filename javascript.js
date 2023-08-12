@@ -49,6 +49,11 @@ function singleRandomColor() {
     randomColor();
 }
 
+function eraser() {
+    rainbowClr = false;
+    paintColor = "rgb(222, 232, 228)";
+}
+
 function randomColor() {
     const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
     const r = randomBetween(0, 255);
